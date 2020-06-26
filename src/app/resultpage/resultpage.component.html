@@ -1,0 +1,206 @@
+
+  <body class="skin-purple sidebar-mini" data-gr-c-s-loaded="true">
+
+        <div class="wrapper">
+      
+      <header class="main-header">
+        <!-- Logo -->
+        <a  class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini">
+            <img src="../../assets/resultpage/rms_logo_light.png" style="height:50px;max-width: 80%;" alt="Result Management System">
+          </span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg">
+            <img src="../../assets/resultpage/rms_logo_light.png" style="height:50px;max-width: 80%;" alt="Result Management System">
+          </span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span> 
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              
+
+
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img style="width: 20px; height: 20px;margin-right:10px;" src="../../assets/avatar/{{student.avatar}}" class="img-circle" alt="User Image">
+                  <span class="hidden-xs">{{student.name}}</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+
+                    <img src="../../assets/avatar/{{student.avatar}}" class="img-circle" alt="User Image">
+                    <p>
+                      {{student.name}}
+                    </p>
+
+                  </li>
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="">
+                      <a style="width: 100%;margin-bottom: 10px;" href="#" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Change avatar</a>
+                      <a style="width: 100%;margin-bottom: 10px;" href="#" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change password</a>
+                    </div>
+                    <div class="">
+                      <a style="width: 100%;margin-bottom: 10px;" href="#" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Log out</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <!-- <li class="header text-center">Result Management System</li> -->
+           <li class=" bg-green">
+              <a href="#" target="_blank"><i class="fa fa-trophy"></i><span>Exam Results</span></a>
+            </li>
+            
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside><style>
+      
+      p{margin: 0;}
+      .header-table tr td {border: 0px solid #fff;padding-top: 20px;padding-bottom: 20px;}
+      .footer-table tr td{padding-top: 20px; padding-bottom: 50px;}
+      #grade-chart td{text-align: center; border: 1px solid #000;padding: 1px 2px; font-size: 11px;line-height: 15px;}
+</style>
+<div class="content-wrapper mark-page" style="min-height: 516px;">
+    <section class="content" style="padding-top:0px">
+        <div class="row">
+            <div class="col-xs-12" style="width:100%">
+                <div class="box">
+                    <div class="box-body">
+                    <div id="printableArea"><div class="row"><div class="col-md-12 result-header text-center"><h4>Result Sheet</h4></div></div><table class="header-table" width="100%"><tbody><tr><td style="padding-right:10px;vertical-align: top;"><p><b>Student Information</b></p><table id="result-table" class="mark-table" width="100%"><tbody><tr>
+			                                <td width="50%">Student Name</td>
+			                                <td width="50%">{{student.name}}</td>
+			                                </tr><tr>
+			                                <td width="50%">Registration Number</td>
+			                                <td width="50%">{{student.id}}</td>
+			                                </tr><tr>
+			                                <td width="50%">Index Number</td>
+			                                <td width="50%">{{student.indexno}}</td>
+			                                </tr><tr>
+			                                <td width="50%">Department</td>
+			                                <td width="50%">{{student.department}}</td>
+			                                </tr><tr>
+			                                <td width="50%">Batch</td>
+			                                <td width="50%">{{student.batch}}</td>
+			                                </tr></tbody></table></td><td style="padding-left:10px;text-align:center; vertical-align: top;" width="250px"><p><b>Grade point chart</b></p><table id="grade-chart" class="mark-table" width="100%"><tbody><tr>
+			                                <td>Letter Grade</td>
+			                                <td>Marks Interval</td>
+			                                <td>Grade point</td>
+			                                </tr><tr>
+			                                <td>A+</td>
+			                                <td>80 - 100</td>
+			                                <td>4.0</td>
+			                                </tr><tr>
+			                                <td>A</td>
+			                                <td>70 - 79</td>
+			                                <td>4.0</td>
+			                                </tr><tr>
+			                                <td>A-</td>
+			                                <td>60 - 69</td>
+			                                <td>3.7</td>
+                                      </tr>
+                                      <tr>
+                                        <td>B+</td>
+                                        <td>70 - 79</td>
+                                        <td>3.3</td>
+                                        </tr>
+                                      <tr>
+			                                <td>B</td>
+			                                <td>50 - 59</td>
+			                                <td>3.0</td>
+                                      </tr>
+                                      <tr>
+                                        <td>B-</td>
+                                        <td>70 - 79</td>
+                                        <td>2.7</td>
+                                        </tr>
+                                        <tr>
+                                          <td>C+</td>
+                                          <td>70 - 79</td>
+                                          <td>2.3</td>
+                                          </tr>
+                                      <tr>
+			                                <td>C</td>
+			                                <td>40 - 49</td>
+			                                <td>2.0</td>
+                                      </tr>
+                                      <tr>
+                                        <td>C-</td>
+                                        <td>70 - 79</td>
+                                        <td>1.7</td>
+                                      </tr>
+                                      <tr>
+                                          <td>D+</td>
+                                          <td>70 - 79</td>
+                                          <td>1.3</td>
+                                      </tr>
+                                      <tr>
+			                                <td>D</td>
+			                                <td>33 - 39</td>
+			                                <td>1.0</td>
+                                      </tr>
+                                      
+                                      <tr>
+			                                <td>F</td>
+			                                <td>0 - 32</td>
+			                                <td>0.0</td>
+                                      </tr>
+                                    
+                                    </tbody></table></td>
+                                      
+                                      
+                                      <td style="padding-left:10px;text-align:right;vertical-align: top;" width="200px"><p style="padding:10px;"></p><img src="../../assets/avatar/{{student.avatar}}" alt="User Avatar" width="160px"></td></tr></tbody></table>
+                                      
+                                      <select (change)="changeExam($event)" style="width:100%" class="browser-default custom-select custom-select-lg mb-3">
+                                        <!-- <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option> -->
+                                        <option *ngFor="let exam of exams" value="{{exam.examid}}">{{exam.name}}</option>
+                                      </select>
+                                      <p>Examination: <b>{{examname}}</b></p>
+                                      
+                                      <table class="mark-table" id="result-table" width="100%"><tbody><tr><th class="center"> Subjects </th><th class="center">End Exam</th><th class="center">Continuous Assesments</th><th class="center">Grade</th><th class="center">Credits</th><th class="center"> Comment </th></tr>
+                                      <ng-container *ngFor="let result of results">
+                                        <tr ><td class="text-left">{{result.subname}}</td><td class="text-center">{{result.ese}}</td><td class="text-center">{{result.ca}}</td><td class="text-center">{{result.result}}</td><td class="text-center">{{result.credits}}</td><td class="text-center">{{comment[result.result]}}</td></tr>
+                                      </ng-container>
+                                      </tbody></table>
+                                        
+                                        
+                                      <table class="footer-table" width="100%"><tbody><tr><td style="padding-right:10px;" width="50%"><p><b>GPA</b></p><table id="result-table" class="mark-table" width="100%"><tbody><tr>
+
+                                      <td width="50%">SGPA</td>
+			                                <td width="50%">{{sgpa.toFixed(2)}}</td>
+			                                </tr><tr>
+			                                <td width="50%">CGPA</td>
+			                                <td width="50%">{{cgpa.toFixed(2)}}</td>
+			                                </tr></tbody></table></td><td style="padding-left:10px;" width="50%">
+                                        
+                                    
+                                    </td></tr></tbody></table></div>                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+  
+</div></body>
